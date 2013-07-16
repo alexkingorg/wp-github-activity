@@ -1,16 +1,15 @@
-# WP GitHub Activity
-
-* Contributors: alexkingorg, crowdfavorite
-* Tags: github, feed, activity, contribution, log, shortcode, widget, filter
-* Requires at least: 3.5.2
-* Tested up to: 3.5.2
-* Stable tag: 1.0
-* License: GPLv2
-* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== WP GitHub Activity ===
+Contributors: alexkingorg, crowdfavorite
+Tags: github, feed, activity, contribution, log, shortcode, widget, filter
+Requires at least: 3.5.2
+Tested up to: 3.5.2
+Stable tag: 1.0
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Display the recent activity from your GitHub account via shortcode or widget.
 
-## Description
+== Description ==
 
 Pulls your activity feed from GitHub (with local caching) and allows you to display it via shortcode or widget.
 
@@ -38,7 +37,7 @@ This plugin is provided under the terms of the GPL, including the following:
 > PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
 > REPAIR OR CORRECTION.
 
-## Installation
+== Installation ==
 
 1. Upload `wp-github-activity.php` or the `wp-github-activity` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
@@ -50,18 +49,23 @@ This plugin is provided under the terms of the GPL, including the following:
 
 The excluded parameter is optional, and uses the keywords included in the HTML comment that appears just before each GitHub activity item.
 
-## Frequently Asked Questions
+== Frequently Asked Questions ==
 
-### Can I list activity for more than one user? 
+= Can I list activity for more than one user? =
 
 Sure, just add another widget or shortcode with the desired username.
 
-### How do I disable the default styling? 
+= How do I disable the default styling? =
 
 There is a filter `cf_github_activity_css_output` to allow you to turn off the CSS output. Attach to this filter and return `true`.
 
-## Changelog
+== Screenshots ==
 
-### 1.0 
+1. Sidebar widget in action
+2. Shortcode in action in the TwentyThirteen theme
+3. Sidebar widget settings
+
+== Changelog ==
+
+= 1.0 =
 * First public release.
-
