@@ -11,6 +11,7 @@ Author URI: http://crowdfavorite.com
 class cf_github_activity {
 	public static $instance = null;
 
+	// has the CSS and JS already been output on this page load?
 	var $css_output = false;
 	var $js_output = false;
 
@@ -27,6 +28,10 @@ function cf_github_activity($username, $excluded = array(), $count = 10, $includ
 	if (is_wp_error($feed)) {
 		return '';
 	}
+
+	// disable the default CSS or JS using these filters
+	cf_github_activity::instance()->css_output = apply_filters('cf_github_activity_css_output', cf_github_activity::instance()->css_output);
+	cf_github_activity::instance()->js_output = apply_filters('cf_github_activity_js_output', cf_github_activity::instance()->js_output);
 
 	$html = '';
 	if ($include_css && !cf_github_activity::instance()->css_output) {

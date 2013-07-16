@@ -56,6 +56,10 @@ The excluded parameter is optional, and uses the keywords included in the HTML c
 
 Sure, just add another widget or shortcode with the desired username.
 
+### How do I disable the default styling? 
+
+There is a filter `cf_github_activity_css_output` to allow you to turn off the CSS output. Attach to this filter and return `true`.
+
 ## Changelog
 
 ### 1.0 
