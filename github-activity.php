@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: GitHub Activity 
+Plugin Name: WP GitHub Activity 
 Plugin URI: http://crowdfavorite.com/wordpress/plugins/ 
-Description: Show your recent GitHub activity on your WordPress site.
+Description: Show your recent GitHub activity on your WordPress site via shortcode or sidebar widget.
 Version: 1.0
 Author: Crowd Favorite
 Author URI: http://crowdfavorite.com
@@ -62,7 +62,7 @@ function cf_github_activity($username, $excluded = array(), $count = 10, $includ
 
 function cf_github_activity_css() {
 ?>
-<style type="text/css">
+<style>
 .github-activity-item {
 	border-bottom: 1px solid #eee;
 	font-size: 13px;
@@ -122,7 +122,7 @@ function cf_github_activity_css() {
 function cf_github_activity_js_fix_urls() {
 	ob_start();
 ?>
-<script type="text/javascript">
+<script>
 jQuery(function($) {
 	$('.github-activity-item a').each(function() {
 		var href = $(this).attr('href');
