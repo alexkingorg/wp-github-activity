@@ -159,6 +159,11 @@ function cf_github_activity_shortcode($args = array()) {
 }
 add_shortcode('github_activity', 'cf_github_activity_shortcode');
 
+function cf_github_activity_add_jquery() {
+    wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'cf_github_activity_add_jquery' );
+
 class CF_GitHub_Activity_Widget extends WP_Widget {
 	function __construct() {
 		$title = __('GitHub Activity', 'github-activity');
