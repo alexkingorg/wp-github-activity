@@ -28,6 +28,8 @@ function cf_github_activity($username, $excluded = array(), $count = 10, $includ
 	if (is_wp_error($feed)) {
 		return '';
 	}
+	
+	wp_enqueue_script('jquery');
 
 	// disable the default CSS or JS using these filters
 	cf_github_activity::instance()->css_output = apply_filters('cf_github_activity_css_output', cf_github_activity::instance()->css_output);
