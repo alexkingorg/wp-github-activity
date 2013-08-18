@@ -29,6 +29,8 @@ function cf_github_activity($username, $excluded = array(), $count = 10, $includ
 		return '';
 	}
 
+    add_action( 'wp_enqueue_scripts', 'cf_github_activity_add_jquery' );
+
 	// disable the default CSS or JS using these filters
 	cf_github_activity::instance()->css_output = apply_filters('cf_github_activity_css_output', cf_github_activity::instance()->css_output);
 	cf_github_activity::instance()->js_output = apply_filters('cf_github_activity_js_output', cf_github_activity::instance()->js_output);
@@ -159,10 +161,10 @@ function cf_github_activity_shortcode($args = array()) {
 }
 add_shortcode('github_activity', 'cf_github_activity_shortcode');
 
+// Add the jquery script to the page if it is not already used.
 function cf_github_activity_add_jquery() {
     wp_enqueue_script( 'jquery' );
 }
-add_action( 'wp_enqueue_scripts', 'cf_github_activity_add_jquery' );
 
 class CF_GitHub_Activity_Widget extends WP_Widget {
 	function __construct() {
