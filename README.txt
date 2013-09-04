@@ -10,7 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Display the recent activity from your GitHub account via shortcode or widget.
 
 == Description ==
-
+  Added Line
+  
 Pulls your activity feed from GitHub (with local caching) and allows you to display it via shortcode or widget.
 
 You can even specify types of updates to exclude from the list (for example, you might decide 'watching' a reposity isn't noteworthy).
